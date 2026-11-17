@@ -1,0 +1,13 @@
+INS
+Res
+Moye
+Algo
+Math
+STI
+ScPh
+Angl
+Fran
+Arab
+Phil
+EdPh
+Opt
