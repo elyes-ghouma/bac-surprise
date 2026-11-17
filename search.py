@@ -1,5 +1,3 @@
-import winsound
-
 def taille(f):
     s=0
     while f.readline()[:-1]!='':
@@ -20,15 +18,4 @@ def verif(msg):
     f.close()
 
     return test 
-    
-def search(x1,x2,y1,y2):
-    text=text_of((x1,y1,x2,y2))
-    while not(verif(text)) and y1>100:
-        text=text_of((x1,y1,x2,y2))
-        y1-=20
-    if y1<=100:
-        print('Message Not Found')
-    else:
-        winsound.MessageBeep()
-        print('Message Found')
-    return text
+

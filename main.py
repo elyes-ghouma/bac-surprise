@@ -1,3 +1,4 @@
+import sys
 from subprocess import run
 from time import sleep
 import winsound
@@ -15,12 +16,12 @@ def mail_method():
         print('No New SMS...')
         sleep(1)
     winsound.MessageBeep()
-    run(['python','interface.py'])
+    run([sys.executable,'interface.py'])
 
 
 def saisir_save_zone():
     moy=input('Saisir save moy : ')
-    while not(moy.isnumeric() and 0<float(moy)<21):
+    while not(moy.replace('.','',1).isdigit() and 0<float(moy)<21):
         moy=input('Saisir save moy : ')
 
     f=open('moy.txt','w')

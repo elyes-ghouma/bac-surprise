@@ -1,4 +1,5 @@
 import tkinter as tk
+from time import sleep
 from pickle import load,dump
 
 #-------------------------------------
@@ -273,7 +274,7 @@ if __name__=='__main__':
         color='black'
     root.configure(bg=color)
     if color=='black':
-        root.destroy()
+        tk.Label(root,text="Sorry to bring this up, but you didn't reach your saved moyenne.\n\nYour moyenne: %s   Saved: %s\n\n(Esc to close)"%(e['Moye'],float(moy)),font=('Arial',30),fg='white',bg='black').pack(expand=True)
     else:
         start_interface()
     root.mainloop()
